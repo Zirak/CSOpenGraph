@@ -38,5 +38,8 @@ Tested for
 * Facebook
 * Github
 * IMDB
+* O'Reilly shop
 * SourceForge
+* Ted talks
 * Think-Geek
+* Yahoo! Answers (why did I test this?)
