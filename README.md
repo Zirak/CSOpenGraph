@@ -1,6 +1,8 @@
 A small OpenGraph data parser. Contains 3 main methods, of which you will only realistically use two:
 
 ```csharp
+using OpenGraphParser;
+// ...
 OpenGraph og = new OpenGraph();
 OpenGraphData data;
 //to get the data, one of:
@@ -32,6 +34,7 @@ Gives you:
 
 Tested for
 
+* Alternative-To
 * Facebook
 * Github
 * IMDB
