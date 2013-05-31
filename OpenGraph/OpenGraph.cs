@@ -70,6 +70,7 @@ namespace OpenGraphParser {
 		}
 
 		private string ParseValueFromNode (HtmlNode node) {
+			//TODO: unescape html entities
 			return node.GetAttributeValue("content", string.Empty);
 		}
 
