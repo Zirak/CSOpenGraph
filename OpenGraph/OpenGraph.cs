@@ -66,7 +66,7 @@ namespace OpenGraphParser {
 		}
 
 		private string ParseKeyFromNode (HtmlNode node) {
-			return node.Attributes["property"].Value.Replace("og:", "");
+			return node.Attributes["property"].Value.Substring(3);
 		}
 
 		private string ParseValueFromNode (HtmlNode node) {
