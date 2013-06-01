@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace OpenGraphParser {
@@ -52,6 +53,24 @@ namespace OpenGraphParser {
 			return ret;
 		}
 
+		private IEnumerable<HtmlNode> GetOGNodes (HtmlDocument doc) {
+			var metas = doc.DocumentNode.SelectNodes(this.metaXPath);
+			
+			foreach (var node in metas) {
+				if (this.IsValidOGNode(node)) {
+					yield return node;
+				}
+			}
+		}
+
+		private bool IsValidOGNode (HtmlNode node) {
+			if (!node.Attributes.Contains("property")) {
+				return false;
+			}
+
+			return node.Attributes["property"].Value.StartsWith("og:");
+		}
+
 		/// <summary>
 		/// Parses the key/value pair from a node, and adds them to the result.
 		/// </summary>
@@ -72,24 +91,6 @@ namespace OpenGraphParser {
 		private string ParseValueFromNode (HtmlNode node) {
 			//TODO: unescape html entities
 			return node.GetAttributeValue("content", string.Empty);
-		}
-
-		private IEnumerable<HtmlNode> GetOGNodes (HtmlDocument doc) {
-			var metas = doc.DocumentNode.SelectNodes(this.metaXPath);
-
-			foreach (var node in metas) {
-				if (this.IsValidOGNode(node)) {
-					yield return node;
-				}
-			}
-		}
-
-		private bool IsValidOGNode (HtmlNode node) {
-			if (!node.Attributes.Contains("property")) {
-				return false;
-			}
-
-			return node.Attributes["property"].Value.StartsWith("og:");
 		}
 	}
 }

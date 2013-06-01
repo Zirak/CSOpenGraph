@@ -43,3 +43,5 @@ Tested for
 * Ted talks
 * Think-Geek
 * Yahoo! Answers (why did I test this?)
+* Youtube
+* UrbanDictionary
