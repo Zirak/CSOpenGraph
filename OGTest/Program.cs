@@ -6,7 +6,7 @@ namespace OGTest {
 	internal class Program {
 
 		private static void Main (string[] args) {
-			string url = "http://www.urbandictionary.com/define.php?term=vurp&defid=7735";
+			string url = "http://chat.stackoverflow.com/rooms/17/javascript";
 			var data = new OpenGraph().ParseFromUrl(url);
 
 			foreach (var pair in data) {
