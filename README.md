@@ -45,3 +45,6 @@ Tested for
 * Yahoo! Answers (why did I test this?)
 * Youtube
 * UrbanDictionary
+
+### License ###
+Licensed under [WTFPL](http://www.wtfpl.net/), so go nuts.
