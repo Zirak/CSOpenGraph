@@ -45,3 +45,4 @@ Tested for
 * Yahoo! Answers (why did I test this?)
 * Youtube
 * UrbanDictionary
+* Kickstarter
