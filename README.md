@@ -38,11 +38,14 @@ Tested for
 * Facebook
 * Github
 * IMDB
+* Kickstarter
 * O'Reilly shop
 * SourceForge
 * Ted talks
 * Think-Geek
+* UrbanDictionary
 * Yahoo! Answers (why did I test this?)
 * Youtube
-* UrbanDictionary
-* Kickstarter
+
+### License ###
+Licensed under [WTFPL](http://www.wtfpl.net/), so go nuts.
